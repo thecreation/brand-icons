@@ -12,7 +12,7 @@ New icons mostly start as requests by the [Brand Icons community on GitHub](../.
 2. Please [search](../../search?type=Issues) to see if your icon request already exists. If a request is found, please +1 that one.
 3. Please make requests for single icons, unless you are requesting a couple of strictly related icons (e.g., thumbs-up/thumbs-down).
 4. Please and thank you if you include the following:
-  - Title your [new issue](../../issues/new?title=Icon%20Request:%) `Icon request: brand-name` (e.g., `Icon request: google`).
+  - Title your [new issue](../../issues/new?title=Icon%20Request:) `Icon request: brand-name` (e.g., `Icon request: google`).
   - Include the brand site url?
   - Attach a single color image or two that represent the idea you're going for.
 
