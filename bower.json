@@ -1,5 +1,5 @@
 {
-  "name": "Brand icons",
+  "name": "brand-icons",
   "version": "0.2.0",
   "main": ["css/*", "fonts/*", "less/*", "demo/*"],
   "ignore": [
