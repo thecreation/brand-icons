@@ -1,0 +1,36 @@
+{
+  "name": "brand-icons",
+  "title": "icons",
+  "description": "A brand icons collection font",
+  "version": "0.1.0",
+  "homepage": "https://github.com/amazingSurge/brand-icons",
+  "author": {
+    "name": "amazingSurge",
+    "email": "amazingSurge@yahoo.com",
+    "url": "amazingSurge.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:amazingSurge/brand-icons.git"
+  },
+  "bugs": "https://github.com/amazingSurge/brand-icons/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/amazingSurge/brand-icons/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-banner": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-svgmin": "*",
+    "grunt-webfont": "*",
+    "load-grunt-tasks": "*"
+  }
+}

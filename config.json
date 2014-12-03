@@ -1,0 +1,19 @@
+{
+	"name": "brand-icons",
+	"raw_source": "src",
+	"source": "icons",
+	"destination": {
+		"font": "dest/fonts",
+		"css": "dest/css/",
+		"html": "dest"
+	},
+	"css_options": {
+		"baseClass": "icon",
+		"classPrefix": "icon-",
+		"mixinPrefix": "icon-"
+	},
+	"templates": {
+		"html": "templates/demo.html",
+		"css": "templates/bem.css"
+	}
+}
