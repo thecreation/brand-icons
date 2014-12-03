@@ -3,17 +3,17 @@
 	"raw_source": "src",
 	"source": "icons",
 	"destination": {
-		"font": "dest/fonts",
-		"css": "dest/css/",
-		"html": "dest"
-	},
-	"css_options": {
-		"baseClass": "icon",
-		"classPrefix": "icon-",
-		"mixinPrefix": "icon-"
+		"font": "fonts",
+		"css": "css/",
+		"html": "demo",
+		"less": "less"
 	},
 	"templates": {
 		"html": "templates/demo.html",
-		"css": "templates/bem.css"
+		"less": "templates/tpl.css"
+	},
+	"templateOptions": {
+		"prefix": "@{bd-css-prefix}-",
+		"classPrefix": "bd-"
 	}
 }

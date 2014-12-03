@@ -20,28 +20,23 @@ module.exports = function(grunt) {
     clean: {
       build: ['<%=config.destination.font%>','<%=config.destination.css%>','<%=config.destination.html%>/<%=config.name%>.html'],
       rename:['src/**/icons_*.svg'],
-      prepare: ['<%=config.source%>']
+      prepare: ['<%=config.source%>'],
+      process: ["<%=config.destination.html%>/<%=config.name%>.less", "<%=config.destination.html%>/<%=config.name%>.html"]
     },
     
-    // -- Concat Config ---------------------------------------------------------
+    // -- concat config ------------------------------------------------------
     concat: {
       options: {
         banner: '<%= banner %>',
         stripBanners: true
-      }
-    },
-
-    // -- banner Config ----------------------------------------------------------
-    usebanner: {
-      dist: {
-        options: {
-          position: 'top',
-          banner: '<%= banner %>',
-          linebreak: false
-        },
-        expand: true,
-        cwd: '<%=config.destination.css%>',
-        src: [ '**/*.less', '**/*.css' ]
+      },
+      less: {
+        src: ['<%=config.destination.less%>/<%=config.name%>.less'],
+        dest: '<%=config.destination.less%>/<%=config.name%>.less'
+      },
+      css: {
+        src: ['<%=config.destination.css%>/<%=config.name%>.css'],
+        dest: '<%=config.destination.css%>/<%=config.name%>.css'
       }
     },
 
@@ -56,6 +51,21 @@ module.exports = function(grunt) {
           return path + name.replace(/icons_/g,"");
         }
       },
+      process: {
+        files: {
+          '<%=config.destination.less%>/icons.less': "<%=config.destination.html%>/<%=config.name%>.less",
+          '<%=config.destination.html%>/index.html': "<%=config.destination.html%>/<%=config.name%>.html",
+        }
+      }
+    },
+
+    // -- less Config ----------------------------------------------------------
+    less: {
+      dist: {
+        files: {
+          '<%=config.destination.css%>/<%=config.name%>.css': "<%=config.destination.less%>/<%=config.name%>.less"
+        }
+      }
     },
 
     // -- svgmin Config ----------------------------------------------------------
@@ -92,54 +102,42 @@ module.exports = function(grunt) {
       }
     },
 
+    // -- replace Config ----------------------------------------------------------
+    replace: {
+        bower: {
+            src: ['bower.json'],
+            overwrite: true, // overwrite matched source files
+            replacements: [{
+                from: /("version": ")([0-9\.]+)(")/g,
+                to: "$1<%= pkg.version %>$3"
+            }]
+        },
+        less: {
+            src: ['less/variables.less'],
+            overwrite: true, // overwrite matched source files
+            replacements: [{
+                from: /(version\s*:\s+")([0-9\.]+)(")/g,
+                to: "$1<%= pkg.version %>$3"
+            }]
+        }
+    },
+
     // -- webfont Config ----------------------------------------------------------
     webfont: {
-      css: {
-        options: {
-          syntax: 'bootstrap',
-          stylesheet: 'css',
-          font: '<%=config.name%>',
-          htmlDemo: true,
-          destHtml: '<%=config.destination.html%>',
-          autoHint: true,
-          relativeFontPath: '../fonts',
-          hashes: false,
-          htmlDemoTemplate: '<%=config.templates.html%>',
-          template: '<%=config.templates.css%>',
-          templateOptions: {
-              "baseClass": '<%=config.css_options.baseClass%>',
-              "classPrefix": '<%=config.css_options.classPrefix%>',
-              "mixinPrefix": '<%=config.css_options.mixinPrefix%>'
-          },
-          rename: function(name) {
-            return path.basename(name).replace(/^\d*-/, '');
-          }
-        },
-        expand: true,
-        cwd: '<%=config.source%>',
-        src: ['**/*.svg'],
-        dest: '<%=config.destination.font%>',
-        destCss: '<%=config.destination.css%>'
-      },
-      less: {
+      dist: {
         options: {
           syntax: 'bootstrap',
           stylesheet: 'less',
           font: '<%=config.name%>',
           htmlDemo: true,
           destHtml: '<%=config.destination.html%>',
+          htmlDemoTemplate: '<%=config.templates.html%>',
           autoHint: true,
           relativeFontPath: '../fonts',
           hashes: false,
-          htmlDemoTemplate: '<%=config.templates.html%>',
-          template: '<%=config.templates.css%>',
-
-          templateOptions: {
-              "fontfaceStyles": false,
-              "baseClass": '<%=config.css_options.baseClass%>',
-              "classPrefix": '<%=config.css_options.classPrefix%>',
-              "mixinPrefix": '<%=config.css_options.mixinPrefix%>'
-          },
+          ie7: false,
+          template: '<%=config.templates.less%>',
+          templateOptions: '<%=config.templateOptions%>',
           rename: function(name) {
             return path.basename(name).replace(/^\d*-/, '');
           }
@@ -148,7 +146,7 @@ module.exports = function(grunt) {
         cwd: '<%=config.source%>',
         src: ['**/*.svg'],
         dest: '<%=config.destination.font%>',
-        destCss: '<%=config.destination.css%>'
+        destCss: '<%=config.destination.html%>'
       }
     }
   });
@@ -213,7 +211,12 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['prepare', 'build']);
 
-  grunt.registerTask('build', ['clean:build','webfont','usebanner']);
+  grunt.registerTask('build', ['clean:build','webfont','copy:process','less','clean:process','concat']);
 
   grunt.registerTask('prepare', ['clean:prepare', 'prepareicons', 'svgmin']);
+
+  grunt.registerTask('version', [
+    'replace:bower',
+    'replace:less'
+  ]);
 };

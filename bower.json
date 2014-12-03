@@ -1,0 +1,14 @@
+{
+  "name": "Brand icons",
+  "version": "0.2.0",
+  "main": ["css/*", "fonts/*", "less/*", "demo/*"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "templates"
+  ]
+}
