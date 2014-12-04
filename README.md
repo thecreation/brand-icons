@@ -22,7 +22,7 @@ simply add icon's classname, such as `bd-twitter` to an HTML element.
 Please read through our [contributing guidelines](https://github.com/amazingSurge/brand-icons/blob/master/CONTRIBUTING.md).
 Included are directions for opening issues, coding standards, and notes on development.
 
- ##Versioning
+## Versioning
 
 Brand Icons will be maintained under the Semantic Versioning guidelines as much as possible. Releases will be numbered
 with the following format:
