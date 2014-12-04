@@ -92,7 +92,7 @@ module.exports = function(grunt) {
     prepareicons: {
       src: {
         options: {
-          icons: 'icons.json',
+          icons: '<%=config.icons_file%>',
           dest: '<%=config.source%>',
         },
         expand: true,
