@@ -1,4 +1,4 @@
-/* icons - v0.2.0 - 2014-12-04
+/* icons - v0.2.0 - 2014-12-25
 * https://github.com/amazingSurge/brand-icons
 * Copyright (c) 2014 amazingSurge; Licensed MIT */
 @font-face {
@@ -63,96 +63,129 @@
 .bd-quora:before {
   content: "\f10f";
 }
-.bd-rdio:before {
+.bd-stackoverflow:before {
   content: "\f110";
 }
-.bd-reddit:before {
+.bd-rdio:before {
   content: "\f111";
 }
-.bd-soundcloud:before {
+.bd-reddit:before {
   content: "\f112";
 }
-.bd-spotify:before {
+.bd-soundcloud:before {
   content: "\f113";
 }
-.bd-stumbleupon:before {
+.bd-spotify:before {
   content: "\f114";
 }
-.bd-tumblr:before {
+.bd-stumbleupon:before {
   content: "\f115";
 }
-.bd-twitter:before {
+.bd-tumblr:before {
   content: "\f116";
 }
-.bd-viadeo:before {
+.bd-twitter:before {
   content: "\f117";
 }
-.bd-vimeo:before {
+.bd-viadeo:before {
   content: "\f118";
 }
-.bd-vine:before {
+.bd-vimeo:before {
   content: "\f119";
 }
-.bd-yelp:before {
+.bd-vine:before {
   content: "\f11a";
 }
-.bd-youtube:before {
+.bd-yelp:before {
   content: "\f11b";
 }
-.bd-android:before {
+.bd-openid:before {
   content: "\f11c";
 }
-.bd-apple:before {
+.bd-vk:before {
   content: "\f11d";
 }
-.bd-windows:before {
+.bd-yahoo:before {
   content: "\f11e";
 }
-.bd-linux:before {
+.bd-xing:before {
   content: "\f11f";
 }
-.bd-wordpress:before {
+.bd-youtube:before {
   content: "\f120";
 }
-.bd-drupal:before {
+.bd-android:before {
   content: "\f121";
 }
-.bd-joomla:before {
+.bd-apple:before {
   content: "\f122";
 }
-.bd-squarespace:before {
+.bd-windows:before {
   content: "\f123";
 }
-.bd-medium:before {
+.bd-linux:before {
   content: "\f124";
 }
-.bd-dropbox:before {
+.bd-wordpress:before {
   content: "\f125";
 }
-.bd-codepen:before {
+.bd-drupal:before {
   content: "\f126";
 }
-.bd-jsfiddle:before {
+.bd-joomla:before {
   content: "\f127";
 }
-.bd-evernote:before {
+.bd-squarespace:before {
   content: "\f128";
 }
-.bd-envato:before {
+.bd-medium:before {
   content: "\f129";
 }
-.bd-skype:before {
+.bd-dropbox:before {
   content: "\f12a";
 }
-.bd-paypal:before {
+.bd-codepen:before {
   content: "\f12b";
 }
-.bd-feed:before {
+.bd-jsfiddle:before {
   content: "\f12c";
 }
-.bd-html5:before {
+.bd-evernote:before {
   content: "\f12d";
 }
-.bd-css3:before {
+.bd-envato:before {
   content: "\f12e";
+}
+.bd-skype:before {
+  content: "\f12f";
+}
+.bd-paypal:before {
+  content: "\f130";
+}
+.bd-feed:before {
+  content: "\f131";
+}
+.bd-html5:before {
+  content: "\f132";
+}
+.bd-css3:before {
+  content: "\f133";
+}
+.bd-webchat:before {
+  content: "\f134";
+}
+.bd-qq:before {
+  content: "\f135";
+}
+.bd-zhihu:before {
+  content: "\f136";
+}
+.bd-weibo:before {
+  content: "\f137";
+}
+.bd-douban:before {
+  content: "\f138";
+}
+.bd-baidu:before {
+  content: "\f139";
 }

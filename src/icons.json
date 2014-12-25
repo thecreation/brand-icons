@@ -55,12 +55,12 @@
 	"feed"           : true,
 	
 	"html5"          : true,
-	"css3"           : true
+	"css3"           : true,
 	
 	"webchat"        : true,
 	"qq"             : true,
 	"zhihu"          : true,
 	"weibo"          : true,
 	"douban"         : true,
-	"baidu"          : true,
+	"baidu"          : true
 }
