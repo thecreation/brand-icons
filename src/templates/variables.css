@@ -1,0 +1,10 @@
+// Variables
+// --------------------------
+@bd-font-path:        "../fonts";
+@bd-font-file:        "brand-icons";
+@bd-font-family:      "Brand Icons";
+@bd-css-prefix:       bd;
+@bd-version:          "0.0.0";
+
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %><%= varPrefix %>-<%= glyphs[glyphIdx] %>: "<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>";
+<% } } %>
