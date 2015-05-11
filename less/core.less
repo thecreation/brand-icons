@@ -3,11 +3,11 @@
 [class^="@{bd-css-prefix}-"], [class*=" @{bd-css-prefix}-"] {
   display: inline-block;
   font: normal normal normal 14px/1 '@{bd-font-family}';
-  font-size: inherit;
+  //font-size: inherit;
   speak: none;
   text-rendering: auto;
 
-  // Better Font Rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); // ensures no half-pixel rendering in firefox
 }
