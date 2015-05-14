@@ -1,10 +1,10 @@
-/* icons - v0.3.1 - 2015-05-11
+/* icons - v0.3.2 - 2015-05-14
 * https://github.com/amazingSurge/brand-icons
 * Copyright (c) 2015 amazingSurge; Licensed MIT */
 @font-face {
   font-family: 'Brand Icons';
-  src: url('../fonts/brand-icons.eot?v=0.3.1');
-  src: url('../fonts/brand-icons.eot?#iefix&v=0.3.1') format('embedded-opentype'), url('../fonts/brand-icons.woff2?v=0.3.1') format('woff2'), url('../fonts/brand-icons.woff?v=0.3.1') format('woff'), url('../fonts/brand-icons.ttf?v=0.3.1') format('truetype'), url('../fonts/brand-icons.svg?v=0.3.1#brand-icons') format('svg');
+  src: url('../fonts/brand-icons.eot?v=0.3.2');
+  src: url('../fonts/brand-icons.eot?#iefix&v=0.3.2') format('embedded-opentype'), url('../fonts/brand-icons.woff2?v=0.3.2') format('woff2'), url('../fonts/brand-icons.woff?v=0.3.2') format('woff'), url('../fonts/brand-icons.ttf?v=0.3.2') format('truetype'), url('../fonts/brand-icons.svg?v=0.3.2#brand-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -171,21 +171,24 @@
 .bd-css3:before {
   content: "\f133";
 }
-.bd-webchat:before {
+.bd-angular:before {
   content: "\f134";
 }
-.bd-qq:before {
+.bd-webchat:before {
   content: "\f135";
 }
-.bd-zhihu:before {
+.bd-qq:before {
   content: "\f136";
 }
-.bd-weibo:before {
+.bd-zhihu:before {
   content: "\f137";
 }
-.bd-douban:before {
+.bd-weibo:before {
   content: "\f138";
 }
-.bd-baidu:before {
+.bd-douban:before {
   content: "\f139";
+}
+.bd-baidu:before {
+  content: "\f13a";
 }
