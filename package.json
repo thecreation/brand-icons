@@ -1,8 +1,8 @@
 {
   "name": "brand-icons",
-  "title": "icons",
+  "title": "Brand Icons",
   "description": "A brand icons collection font",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "homepage": "https://github.com/amazingSurge/brand-icons",
   "author": {
     "name": "amazingSurge",
@@ -31,6 +31,7 @@
     "grunt-contrib-copy": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-less": "*",
+    "grunt-contrib-sass": "*",
     "grunt-text-replace": "*",
     "grunt-svgmin": "*",
     "grunt-webfont": "*",
