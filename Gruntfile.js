@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+      ' Licensed MIT */\n',
     // Task configuration.
 
     // -- Clean Config ---------------------------------------------------------
@@ -197,12 +197,15 @@ module.exports = function(grunt) {
           htmlDemo: true,
           destHtml: '<%=config.destination.html%>',
           htmlDemoTemplate: '<%=config.templates.html%>',
+          engine: 'fontforge',
           autoHint: true,
           relativeFontPath: '../fonts',
           hashes: false,
           ie7: false,
           template: '<%=config.templates.icons%>',
           templateOptions: '<%=config.templateOptions%>',
+          ligatures: false,
+          normalize: true,
           rename: function(name) {
             return path.basename(name).replace(/^\d*-/, '');
           }
@@ -222,12 +225,15 @@ module.exports = function(grunt) {
           htmlDemo: true,
           destHtml: '<%=config.destination.html%>',
           htmlDemoTemplate: '<%=config.templates.html%>',
+          engine: 'fontforge',
           autoHint: true,
           relativeFontPath: '../fonts',
           hashes: false,
           ie7: false,
           template: '<%=config.templates.variables%>',
           templateOptions: '<%=config.templateOptions%>',
+          ligatures: false,
+          normalize: true,
           rename: function(name) {
             return path.basename(name).replace(/^\d*-/, '');
           }
